@@ -12,9 +12,19 @@ import re
 
 
 
-input_string = input("Enter anything \t")
+# input_string = input("Enter anything \t")
 
 result = lambda x: "Pass" if re.fullmatch('[A-Za-z0-9!@#$%^&*++]{8,}', x) else "Fail"
 
-print(result(input_string))
+# print(result(input_string))
 
+
+# Assertion - LOOKAHEAD, Positive Lookahead (makes sure pattern is present)
+
+
+input_is = input("enter password \t")
+
+
+check_at_least = lambda x: "Pass" if re.fullmatch("(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]{6,})", x) else "Fail"
+
+check_at_least(input_is)
