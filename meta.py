@@ -22,9 +22,15 @@ out1 =re.search(pattern=end_pattern, string=strings)
     # [a-Z] matches a-z and A-Z all    
 
 
+out2 = re.findall('[^a-z]', "Hi I am manoj")
 
 
+# Special Sequences \d[0-9] , \w[0-9a-Z]
 
+# Search( ) returns matches while findall returns list
+
+out3 = re.findall('\d', "Hi 9834 is my number")
+print(out3)
 
 
 
